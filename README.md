@@ -63,3 +63,7 @@ myRef = React.createRef()
 #### dangerouslySetInnerHtml
 
 [dangerouslySetInnerHtml README](./src/components/dangerouslySetInnerHtml/DangerouslySetInnerHtml.jsx)
+
+#### tab 组件 DEMO
+
+[tab 组件 demo](./src/components/tab/Tab.jsx)

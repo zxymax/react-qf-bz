@@ -59,3 +59,7 @@ myRef = React.createRef()
 > 状态就是组件描述某种显示情况的数据，由组件自己设置和更改
 
 - 不能直接修改 state 值 需要使用 setState 来修改 state
+
+#### dangerouslySetInnerHtml
+
+[dangerouslySetInnerHtml README](./src/components/dangerouslySetInnerHtml/DangerouslySetInnerHtml.jsx)

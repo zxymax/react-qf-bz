@@ -36,6 +36,8 @@
 
 ##### Rect 不会绑定事件到元素身上 而是采用事件代理的模式
 
+[Ref README](./src/components/ref/RefComponent.jsx)
+
 > Ref 的应用
 
 > > 给标签设置 ref="username"
@@ -49,3 +51,11 @@ myRef = React.createRef()
 <div ref={this.myRef}>hello</div>
 // 通过 this.myRef.current 访问
 ```
+
+#### 状态 state
+
+[State README](./src/components/state/State.jsx)
+
+> 状态就是组件描述某种显示情况的数据，由组件自己设置和更改
+
+- 不能直接修改 state 值 需要使用 setState 来修改 state

@@ -1,6 +1,7 @@
 import RefComponent from './components/ref/RefComponent'
 import State from './components/state/State'
 import DangerouslySetInnerHtml from './components/dangerouslySetInnerHtml/DangerouslySetInnerHtml'
+import Tab from './components/tab/Tab'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <RefComponent />
       <State />
       <DangerouslySetInnerHtml />
+      <Tab />
     </div>
   )
 }

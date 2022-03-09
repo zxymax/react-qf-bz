@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import styled from '@emotion/styled'
+import axios from 'axios'
+import Cinema from './Cinema'
+import Film from './Film'
 
 const TabBox = styled.div`
   width: 100%;
@@ -26,21 +29,6 @@ const Ulli = styled.li`
   }
 `
 
-const Film = () => {
-  return (
-    <>
-      <h1>电影 Component</h1>
-    </>
-  )
-}
-
-const Cinema = () => {
-  return (
-    <>
-      <h1>影院 Component</h1>
-    </>
-  )
-}
 
 const Center = () => {
   return (
@@ -62,6 +50,17 @@ class Tab extends Component {
         { id: 2, text: '我的' }
       ]
     }
+  }
+  componentDidMount() {
+    axios({
+      url: 'https://m.maizuo.com/gateway?cityId=110100&pageNum=4&pageSize=10&type=1&k=7843086',
+      method: 'GET',
+      headers: {
+        'X-Host': 'mall.film-ticket.film.list',
+      }
+    }).then(res => {
+      console.log(res.data.data.films)
+    })
   }
 
   handleClick = index => {

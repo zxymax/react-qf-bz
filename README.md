@@ -105,3 +105,7 @@ myRef = React.createRef()
 - npm install prop-types
 
 [prpp-types 用法](./src/components/props/Nav.jsx)
+
+#### 父子通信
+
+[父子组件通信](./src/components/props/ChildToParent.jsx)

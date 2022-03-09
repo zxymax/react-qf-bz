@@ -4,6 +4,7 @@ import DangerouslySetInnerHtml from './components/dangerouslySetInnerHtml/Danger
 import Tab from './components/tab/Tab'
 import Bar from './components/props/Nav'
 import ParentChildCommunication from './components/props/ChildToParent'
+import ContextComp from './components/props/Context'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <h1>Hello, react</h1>
       <Bar />
       <ParentChildCommunication />
+      <ContextComp />
       <RefComponent />
       <State />
       <DangerouslySetInnerHtml />

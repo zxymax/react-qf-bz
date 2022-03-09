@@ -99,3 +99,9 @@ myRef = React.createRef()
 
 
 ```
+
+#### props 组件通信传值用法及验证
+
+- npm install prop-types
+
+[prpp-types 用法](./src/components/props/Nav.jsx)

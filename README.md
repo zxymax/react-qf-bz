@@ -67,3 +67,29 @@ myRef = React.createRef()
 #### tab 组件 DEMO
 
 [tab 组件 demo](./src/components/tab/Tab.jsx)
+
+> 数据请求
+
+- npm install axios
+
+```jsx
+// Cinema.jsx
+// 此接口需要请求头才能请求成功
+
+  componentDidMount() {
+    axios({
+      url: 'https://m.maizuo.com/gateway?cityId=110100&ticketFlag=1&k=7902139',
+      method: 'GET',
+      headers: {
+        'X-Host': 'mall.film-ticket.cinema.list',
+      }
+    }).then(res => {
+      console.log(res.data.data)
+      this.setState((preState) =>({
+        cinemaList: [...preState.cinemaList, ...res.data.data.cinemas]
+      }))
+    })
+  }
+
+
+```

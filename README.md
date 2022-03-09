@@ -60,6 +60,12 @@ myRef = React.createRef()
 
 - 不能直接修改 state 值 需要使用 setState 来修改 state
 
+> setState 同步 异步
+
+> > setState 处在同步的逻辑中 异步更新状态 更新真实 DOM
+
+> > setState 处在异步的逻辑中 同步更新状态 同步更新真实 DOM
+
 #### dangerouslySetInnerHtml
 
 [dangerouslySetInnerHtml README](./src/components/dangerouslySetInnerHtml/DangerouslySetInnerHtml.jsx)

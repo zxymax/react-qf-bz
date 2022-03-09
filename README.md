@@ -109,3 +109,11 @@ myRef = React.createRef()
 #### 父子通信
 
 [父子组件通信](./src/components/props/ChildToParent.jsx)
+
+> 使用 Context 可以跨越组件进行数据传递
+
+> > [视频例子出处 27React 的 Context 上下文详解](https://www.bilibili.com/video/BV19v411z7mC)
+
+- React.createContext() 创建一个上下文 里面包含 Provider(提供数据) Consumer(消费数据)
+
+[父子组件通信 Context 使用方式](./src/components/props/Context.jsx)

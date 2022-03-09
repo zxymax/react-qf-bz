@@ -3,12 +3,14 @@ import State from './components/state/State'
 import DangerouslySetInnerHtml from './components/dangerouslySetInnerHtml/DangerouslySetInnerHtml'
 import Tab from './components/tab/Tab'
 import Bar from './components/props/Nav'
+import ParentChildCommunication from './components/props/ChildToParent'
 
 function App() {
   return (
     <div className="App">
       <h1>Hello, react</h1>
       <Bar />
+      <ParentChildCommunication />
       <RefComponent />
       <State />
       <DangerouslySetInnerHtml />

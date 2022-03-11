@@ -11,11 +11,10 @@ const NavBox = styled.div`
 class ChidComp extends Component {
   constructor(props) {
     super(props)
-
   }
   render() {
     const { sidebar, handleClick } = this.props
-    return(
+    return (
       <NavBox>
         <button onClick={() => handleClick()}>{sidebar}</button>
       </NavBox>
@@ -30,7 +29,6 @@ const SideBarBox = styled.ul`
   color: #fff;
 `
 
-
 class SideBar extends Component {
   constructor(props) {
     super(props)
@@ -40,16 +38,15 @@ class SideBar extends Component {
     return (
       <>
         <SideBarBox>
-        <li>开心鬼</li>
-        <li>鬼打鬼</li>
-        <li>僵尸叔叔</li>
-        <li>僵尸先生</li>
-      </SideBarBox>
+          <li>开心鬼</li>
+          <li>鬼打鬼</li>
+          <li>僵尸叔叔</li>
+          <li>僵尸先生</li>
+        </SideBarBox>
       </>
     )
   }
 }
-
 
 class ParentComp extends Component {
   constructor(props) {
@@ -72,7 +69,7 @@ class ParentComp extends Component {
       })
     }
     this.setState({
-      isShow: !this.state.isShow,
+      isShow: !this.state.isShow
     })
   }
 
@@ -82,7 +79,7 @@ class ParentComp extends Component {
       <>
         <h1>父子通信</h1>
         <ChidComp sidebar={sidebar} handleClick={this.handleClick} />
-        { isShow && <SideBar />}
+        {isShow && <SideBar />}
       </>
     )
   }

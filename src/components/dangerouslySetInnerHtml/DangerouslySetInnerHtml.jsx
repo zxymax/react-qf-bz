@@ -10,7 +10,7 @@ class DangerouslySetInnerHtml extends Component {
     }
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState(() => {
       return {
         val: e.target.value
@@ -18,18 +18,19 @@ class DangerouslySetInnerHtml extends Component {
     })
   }
 
-
   render() {
-    const { val, info} = this.state
+    const { val, info } = this.state
     return (
       <>
-      <input type="text" value={val} onChange={this.handleChange}/>
-      {val === '' ? null :<div dangerouslySetInnerHTML={{__html: val}}></div>}
-      <div dangerouslySetInnerHTML={
-        {
-          __html: info
-        }
-      }></div>
+        <input type="text" value={val} onChange={this.handleChange} />
+        {val === '' ? null : (
+          <div dangerouslySetInnerHTML={{ __html: val }}></div>
+        )}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: info
+          }}
+        ></div>
       </>
     )
   }

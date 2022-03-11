@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-const { Provider, Consumer} = React.createContext()
-
+const { Provider, Consumer } = React.createContext()
 
 const Container = () => {
   return <Title />
@@ -11,16 +10,14 @@ const Title = () => {
   return (
     <div>
       <Consumer>
-      {
-        user => {
+        {user => {
           return (
             <div>
-              {user.name} - { user.age } - { user.city}
+哈哈哈              {user.name} - {user.age} - {user.city}
             </div>
           )
-        }
-      }
-    </Consumer>
+        }}
+      </Consumer>
     </div>
   )
 }
@@ -44,10 +41,18 @@ class ContextComp extends Component {
       <>
         <h1>Context 通信</h1>
         <Provider value={User}>
-        <Container />
-      </Provider>
-      <input type="button" value="change value" onClick={()=> this.setState((preState) => ({ User: {...preState.User, age: preState.User.age+1}}))} />
-      <hr/>
+          <Container />
+        </Provider>
+        <input
+          type="button"
+          value="change value"
+          onClick={() =>
+            this.setState(preState => ({
+              User: { ...preState.User, age: preState.User.age + 1 }
+            }))
+          }
+        />
+        <hr />
       </>
     )
   }

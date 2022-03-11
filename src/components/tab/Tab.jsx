@@ -29,7 +29,6 @@ const Ulli = styled.li`
   }
 `
 
-
 const Center = () => {
   return (
     <>
@@ -56,7 +55,7 @@ class Tab extends Component {
       url: 'https://m.maizuo.com/gateway?cityId=110100&pageNum=4&pageSize=10&type=1&k=7843086',
       method: 'GET',
       headers: {
-        'X-Host': 'mall.film-ticket.film.list',
+        'X-Host': 'mall.film-ticket.film.list'
       }
     }).then(res => {
       console.log(res.data.data.films)

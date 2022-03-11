@@ -1,7 +1,6 @@
 import React, { createRef, Component } from 'react'
 
 class RefComponent extends Component {
-
   constructor(props) {
     super(props)
 
@@ -9,11 +8,13 @@ class RefComponent extends Component {
     this.firstWay = this.firstWay.bind(this)
   }
 
-  firstWay() { // 需要绑定this 改变this指向 到组件 若不绑定this 值是undefined
+  firstWay() {
+    // 需要绑定this 改变this指向 到组件 若不绑定this 值是undefined
     console.log(this.inputRef.current.value)
   }
 
-  secondWay = () => { // ES6语法 this指向 组件
+  secondWay = () => {
+    // ES6语法 this指向 组件
     console.log(this)
     console.log(this.inputRef.current.value)
 
